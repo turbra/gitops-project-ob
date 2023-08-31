@@ -1,2 +1,22 @@
-# gitops-project-ob
-gitops-project-ob aims to streamline the onboarding process using a GitOps-based approach. 
+# GitOps Project Onboarding (gitops-project-ob)
+
+This repository contains the GitOps configurations and resources required for onboarding environments and applications in our Kubernetes clusters.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+
+## Overview
+
+**gitops-project-ob** aims to streamline the onboarding process using a GitOps-based approach. The configurations contained herein define the desired state for specific environments, ensuring consistency, repeatability, and traceability in deployments.
+
+## Project Structure
+
+- `base/` - Contains the base Kubernetes manifests and configurations.
+    - `environment/` - Specific environment configurations and resources.
+        - `dev/` - Development environment configurations.
+        - `prod/` - Production environment configurations.
+- Other directories and files as required...
+
+(Note: Update the structure based on the actual directory and file setup of your project.)
