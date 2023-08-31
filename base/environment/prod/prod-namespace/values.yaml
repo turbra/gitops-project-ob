@@ -1,0 +1,12 @@
+namespace:
+  name: prod-namespace
+
+serviceaccount:
+  name: prod-serviceaccount
+
+quotas:
+  pods: "20"
+  cpuRequest: "2"
+  memoryRequest: "2Gi"
+  cpuLimit: "4"
+  memoryLimit: "4Gi"
