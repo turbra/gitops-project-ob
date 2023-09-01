@@ -12,9 +12,6 @@ spec:
     path: clusters/turbra-test/
     repoURL: https://github.com/turbra/gitops-project-ob.git
     targetRevision: main
-    helm:
-      valueFiles:
-        - ../dev-namespace/values.yaml
   syncPolicy:
     automated:
       prune: true

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-project-config-app-of-apps
+  name: dev-project-config-app-of-apps
   namespace: openshift-gitops
 spec:
   destination:
@@ -12,6 +12,9 @@ spec:
     path: clusters/turbra-test/
     repoURL: https://github.com/turbra/gitops-project-ob.git
     targetRevision: main
+    helm:
+      valueFiles:
+        - ../dev-namespace/values.yaml
   syncPolicy:
     automated:
       prune: true
