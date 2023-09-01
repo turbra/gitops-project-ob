@@ -5,4 +5,5 @@ bases:
 - ../../base
 
 resources:
-- project-config-app-of-apps.yaml
+- dev-project-config-app-of-apps.yaml
+- prod-project-config-app-of-apps.yaml
