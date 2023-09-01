@@ -11,7 +11,7 @@ spec:
   source:
     path: clusters/turbra-test/
     repoURL: https://github.com/turbra/gitops-project-ob.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
