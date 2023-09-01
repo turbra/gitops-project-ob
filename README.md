@@ -20,3 +20,9 @@ This repository contains the GitOps configurations and resources required for on
 - Other directories and files as required...
 
 (Note: Update the structure based on the actual directory and file setup of your project.)
+
+# Install app-of-apps
+
+```
+oc apply -k bootstrap/clusters/overlays/<cluster-name>
+```
