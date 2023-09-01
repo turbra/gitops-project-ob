@@ -6,6 +6,7 @@ This repository contains the GitOps configurations and resources required for on
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
+- [Install app-of-apps](#install-app-of-apps)
 
 ## Overview
 
