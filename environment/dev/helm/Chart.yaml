@@ -1,0 +1,4 @@
+apiVersion: v2
+name: openshift-configurations
+description: A Helm chart for setting up namespace, service account, and permissions in OpenShift/Kubernetes
+version: 0.1.0
