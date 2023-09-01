@@ -13,10 +13,10 @@ This repository contains the GitOps configurations and resources required for on
 
 ## Project Structure
 
-- `base/` - Contains the base Kubernetes manifests and configurations.
-    - `environment/` - Specific environment configurations and resources.
+- `environment/` - Specific environment configurations and resources.
         - `dev/` - Development environment configurations.
         - `prod/` - Production environment configurations.
+    
 - Other directories and files as required...
 
 (Note: Update the structure based on the actual directory and file setup of your project.)
