@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: dev-projects
+spec:
+  generators:
+  - directory:
+      repoURL: https://github.com/turbra/gitops-project-ob.git
+      revision: HEAD
+      path: environment/dev
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/turbra/gitops-project-ob.git
+        path: environment/dev/helm
+        targetRevision: HEAD
+        helm:
+          valueFiles:
+            - 'environment/dev/{{path.basename}}/values.yaml'
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: '{{path.basename}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
