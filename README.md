@@ -14,8 +14,8 @@ This repository contains the GitOps configurations and resources required for on
 ## Project Structure
 
 - `environment/` - Specific environment configurations and resources.
-        - `dev/` - Development environment configurations.
-        - `prod/` - Production environment configurations.
+  - `dev/` - Development environment configurations.
+  - `prod/` - Production environment configurations.
     
 - Other directories and files as required...
 
