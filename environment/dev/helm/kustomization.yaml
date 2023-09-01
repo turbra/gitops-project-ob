@@ -1,0 +1,5 @@
+resources:
+  - templates/namespace.yaml
+  - templates/resourcequota.yaml
+  - templates/rolebinding.yaml
+  - templates/serviceaccount.yaml
