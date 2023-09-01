@@ -12,7 +12,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: default
+      project: project-config
       source:
         repoURL: https://github.com/turbra/gitops-project-ob.git
         path: environment/dev/helm
