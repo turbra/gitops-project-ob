@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: project-config
   source:
-    path: clusters/turbra-test/
+    path: environment/dev/helm
     repoURL: https://github.com/turbra/gitops-project-ob.git
     targetRevision: main
   syncPolicy:
