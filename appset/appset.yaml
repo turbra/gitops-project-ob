@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/turbra/gitops-project-ob.git
       revision: test
       directories:
-      - path: environment/*
+      - path: environment/dev/
   template:
     metadata:
       name: '{{path.basename}}'
@@ -18,16 +18,16 @@ spec:
       syncPolicy:
         automated:
           prune: true
-          selfHeal: true
+          selfHeal: false
         syncOptions:
         - CreateNamespace=true
       source:
         repoURL: 'https://github.com/turbra/gitops-project-ob.git'
         targetRevision: test
-        path: environment/*/helm
+        path: environment/dev/helm
         helm:
           valueFiles:
-          - '{{filepath}}/*'
+          - '../environment/dev/*'
       destination:
         server: 'https://kubernetes.default.svc'
         namespace: openshift-gitops
