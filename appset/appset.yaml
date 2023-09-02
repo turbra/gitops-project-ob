@@ -29,7 +29,7 @@ spec:
         path: 'environment/{{path[1]}}/helm'
         helm:
           valueFiles:
-          - 'environment/{{path[1]}}/{{path[2]}}/values.yaml'
+          - '../{{path[2]}}/values.yaml'
       destination:
         server: 'https://kubernetes.default.svc'
         namespace: openshift-gitops
