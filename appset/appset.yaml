@@ -12,8 +12,8 @@ spec:
         - path: environment/*/*-*/values.yaml
   template:
     metadata:
-      # This assumes the structure is always environment/{env}/{appName}-{env}/values.yaml
-      # If the structure changes, this needs to be updated.
+      # The application name in ArgoCD is derived from the directory structure.
+      # Given the format environment/{env}/{appName}-{env}/values.yaml, it picks the {appName}-{env} segment.
       name: '{{path[2]}}'
     spec:
       project: project-config
