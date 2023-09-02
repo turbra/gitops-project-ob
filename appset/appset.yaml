@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/turbra/gitops-project-ob.git
       revision: test
       directories:
-      - path: environment/dev/
+      - path: environment/dev/dev-namespace
   template:
     metadata:
       name: '{{path.basename}}'
