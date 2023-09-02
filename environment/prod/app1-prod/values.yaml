@@ -1,8 +1,8 @@
 namespace:
-  name: prod-namespace
+  name: app1-prod
 
 serviceaccount:
-  name: prod-serviceaccount
+  name: app1-prod-serviceaccount
 
 quotas:
   pods: "20"
