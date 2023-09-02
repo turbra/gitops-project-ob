@@ -7,7 +7,7 @@ spec:
 generators:
 - git:
     repoURL: https://github.com/turbra/gitops-project-ob.git
-      revision: test
+      targetRevision: test
       directories:
         - path: environment/*
 template:
