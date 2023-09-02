@@ -4,10 +4,11 @@ metadata:
   name: projects
 spec:
   generators:
-  - directory:
+  - git:
       repoURL: https://github.com/turbra/gitops-project-ob.git
       revision: HEAD
-      path: environment/*
+      directories:
+        - path: environment/*
   template:
     metadata:
       name: '{{path.basename}}'
