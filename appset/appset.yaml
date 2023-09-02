@@ -24,7 +24,7 @@ spec:
       source:
         repoURL: 'https://github.com/turbra/gitops-project-ob.git'
         targetRevision: test
-        path: gitops-project-ob
+        path: environment/*/helm
         helm:
           valueFiles:
           - '{{filepath}}/*'
