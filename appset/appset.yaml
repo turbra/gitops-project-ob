@@ -14,7 +14,7 @@ spec:
     metadata:
       # This assumes the structure is always environment/{env}/{appName}-{env}/values.yaml
       # If the structure changes, this needs to be updated.
-      name: '{{path[1]}}-{{path[2]}}'
+      name: '{{path[2]}}'
     spec:
       project: project-config
       syncPolicy:
