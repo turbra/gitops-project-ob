@@ -1,33 +1,33 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-name: namespace-config
-namespace: openshift-gitops
+  name: namespace-config
+  namespace: openshift-gitops
 spec:
-generators:
-- git:
-    repoURL: https://github.com/turbra/gitops-project-ob.git
+  generators:
+  - git:
+      repoURL: https://github.com/turbra/gitops-project-ob.git
       targetRevision: test
       directories:
-        - path: environment/*
-template:
-  metadata:
-    name: '{{path.basename}}'
-  spec:
-    project: project-config
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
+      - path: environment/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: project-config
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
         - CreateNamespace=true
-    source:
-      repoURL: 'https://github.com/turbra/gitops-project-ob.git'
-      targetRevision: test
-      path: gitops-project-ob
-      helm:
-        valueFiles:
-        - '{{filepath}}/*'
-    destination:
-      server: 'https://kubernetes.default.svc'
-      namespace: openshift-gitops
+      source:
+        repoURL: 'https://github.com/turbra/gitops-project-ob.git'
+        targetRevision: test
+        path: gitops-project-ob
+        helm:
+          valueFiles:
+          - '{{filepath}}/*'
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: openshift-gitops
