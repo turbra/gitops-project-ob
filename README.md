@@ -18,6 +18,22 @@ The project is structured to dynamically onboard and manage Kubernetes namespace
 
 Helm templates are leveraged to offer a standardized and parameterized setup for each namespace, encompassing resources such as `ResourceQuotas`, `ServiceAccounts`, and `RoleBindings`.
 
+## Namespace Configuration Design
+
+Each namespace has its own dedicated folder containing a `values.yaml` file. This structure provides several benefits:
+
+### 1. **Isolation**: 
+By keeping the configuration for each namespace separate, we eliminate the risk of a change intended for one namespace inadvertently affecting another.
+
+### 2. **Scalability**: 
+Adding a new namespace is as simple as creating a new directory and corresponding `values.yaml` file. The `ApplicationSet` will automatically detect and apply the new configuration.
+
+### 3. **Clarity**:
+It becomes straightforward to understand the configuration and resources associated with each namespace. Anyone looking into the directory can immediately grasp the scope and settings of each namespace.
+
+### 4. **Flexibility**:
+If specific namespaces require unique configurations or additional resources in the future, this design supports that by allowing unique additions or modifications to their respective `values.yaml` or directory, without disrupting the structure or affecting other namespaces.
+
 ## Directory Structure
 
 ```
@@ -50,7 +66,7 @@ Helm templates are leveraged to offer a standardized and parameterized setup for
 
 ## Helm Templates
 
-The Helm templates, located within `environment/dev/helm/templates` and `environment/prod/helm/templates`, furnish the structure and configuration for a variety of Kubernetes resources:
+The Helm templates found in `environment/dev/helm/templates` and `environment/prod/helm/templates` serve as a foundational framework. They define a set of Kubernetes resources, which you can extend or modify to meet evolving requirements:
 
 - **Namespace**: Template for Kubernetes namespace creation.
 - **ResourceQuota**: Template that defines constraints like CPU, memory, and storage allocations for the namespace.
@@ -64,7 +80,7 @@ To tailor each namespace, the corresponding `values.yaml` file can override or d
 1. Create a directory under `environment/dev` or `environment/prod` with the namespace's desired name, e.g., `app2-dev`.
 2. Within this new directory, introduce a `values.yaml` containing unique values for that namespace.
 3. Commit and push the modifications to the repository.
-4. Upon the next sync, ArgoCD will discern the new directory and set up an application for that namespace, utilizing the Helm templates.
+4. When ArgoCD performs its next synchronization, it will detect the new directory and configure an application for the corresponding namespace using the Helm templates.
 
 ## Naming Convention
 
