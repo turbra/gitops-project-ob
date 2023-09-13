@@ -2,6 +2,10 @@
 
 This repository manages the dynamic creation of Kubernetes namespaces using ArgoCD's `ApplicationSet`.
 
+## Application Tiles
+![image](https://github.com/turbra/gitops-project-ob/assets/52045281/ea44cac0-486d-42e9-8f44-e770f96f710a)
+
+
 ## Initialization
 
 Before leveraging the dynamic namespace creation, you'll need to bootstrap the project. Run the following command to apply the ApplicationSet:
