@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/turbra/gitops-project-ob.git
-      revision: HEAD
+      revision: main
       files:
         - path: environment/*/*-*/values.yaml
   template:
@@ -25,7 +25,7 @@ spec:
         - CreateNamespace=true
       source:
         repoURL: 'https://github.com/turbra/gitops-project-ob.git'
-        targetRevision: HEAD
+        targetRevision: main
         path: 'environment/{{path[1]}}/helm'
         helm:
           valueFiles:
