@@ -10,13 +10,25 @@ This repository manages the dynamic creation of Kubernetes namespaces using Argo
 
 ## Initialization
 
-Before leveraging the dynamic namespace creation, you'll need to bootstrap the project. Run the following command to apply the ApplicationSet:
+Before leveraging the dynamic namespace creation, you'll need to bootstrap the project. Follow the steps below:
 
-```bash
-oc apply -f appset/appset.yaml
-```
+1. **Create the ArgoCD Project**:
+   
+   Before applying the `ApplicationSet`, ensure the required ArgoCD project exists. Create the `AppProject` using:
 
-This command initializes the `ApplicationSet` in ArgoCD, facilitating the dynamic creation of namespaces as described below.
+   ```bash
+   oc apply -f appset/project-config.yaml
+   ```
+
+2. **Initialize the ApplicationSet**:
+
+   After setting up the `AppProject`, proceed with initializing the `ApplicationSet`:
+
+   ```bash
+   oc apply -f appset/appset.yaml
+   ```
+
+   This command initializes the `ApplicationSet` in ArgoCD, facilitating the dynamic creation of namespaces as described below.
 
 ## Overview
 
