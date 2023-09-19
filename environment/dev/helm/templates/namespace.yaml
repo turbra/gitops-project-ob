@@ -1,6 +1,4 @@
-apiVersion: project.openshift.io/v1
-kind: ProjectRequest
+apiVersion: v1
+kind: Namespace
 metadata:
-  name: {{ .Values.projectName }}
-spec:
-  description: {{ .Values.projectDescription | default "No description provided." }}
+  name: {{ .Values.namespace.name }}
