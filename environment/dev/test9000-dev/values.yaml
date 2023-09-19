@@ -1,7 +1,7 @@
 projectName: "test9000-dev"
 
 serviceaccount:
-  name: app1-dev-serviceaccount
+  name: test9000-dev-serviceaccount
 
 quotas:
   pods: "20"
