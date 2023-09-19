@@ -1,4 +1,5 @@
 projectName: "test9000-dev"
+projectDescription: "Description of the project."
 
 serviceaccount:
   name: test9000-dev-serviceaccount
