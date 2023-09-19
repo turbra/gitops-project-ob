@@ -1,5 +1,5 @@
-projectName: "test9000-dev"
-projectDescription: "Description of the project."
+namespace:
+  name: test9000-dev
 
 serviceaccount:
   name: test9000-dev-serviceaccount
