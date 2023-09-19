@@ -2,11 +2,11 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: {{ .Values.serviceaccount.name }}-edit-rolebinding
-  namespace: {{ .Values.namespace.name }}
+  namespace: {{ .Values.projectName }}
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.serviceaccount.name }}
-  namespace: {{ .Values.namespace.name }}
+  namespace: {{ .Values.projectName }}
 roleRef:
   kind: ClusterRole
   name: edit
