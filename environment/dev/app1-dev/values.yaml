@@ -1,5 +1,4 @@
-namespace:
-  name: app1-dev
+projectName: "app1-dev"
 
 serviceaccount:
   name: app1-dev-serviceaccount
