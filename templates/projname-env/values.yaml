@@ -1,0 +1,12 @@
+namespace:
+  name: <projname-env>
+
+serviceaccount:
+  name: <projname-env>-serviceaccount
+
+quotas:
+  pods: "20"
+  cpuRequest: "2"
+  memoryRequest: "2Gi"
+  cpuLimit: "4"
+  memoryLimit: "4Gi"
