@@ -1,6 +1,12 @@
 namespace:
   name: <projname-env>
 
+rolebinding:
+  name-viewer: <ad-group-name-viewer>
+  group-viewer: <ad-group-name-viewer>
+  name-projadmin: <ad-group-name-projadmin>
+  group-projadmin: <ad-group-name-projadmin>
+
 serviceaccount:
   name: <projname-env>-serviceaccount
 
