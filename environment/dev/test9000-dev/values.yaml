@@ -1,6 +1,12 @@
 namespace:
   name: test9000-dev
 
+rolebinding:
+  name-projadmin: grp_test9000_proj-admin_ocp_dev
+  group-projadmin: grp_test9000_proj-admin_ocp_dev
+  name-viewer: grp_test9000_viewer_ocp_dev
+  group-viewer: grp_test9000_viewer_ocp_dev
+
 serviceaccount:
   name: test9000-dev-serviceaccount
 
