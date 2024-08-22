@@ -6,7 +6,6 @@ metadata:
 subjects:
 - kind: Group
   name: {{ .Values.rolebinding.group_projadmin }}
-  namespace: {{ .Values.namespace.name }}
 roleRef:
   kind: ClusterRole
   name: admin
