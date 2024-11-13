@@ -8,9 +8,9 @@ rolebinding:
 serviceaccount:
   name: dev-adm-false-serviceaccount
 
-quotas:
-  pods: "20"
-  cpuRequest: "2"
-  memoryRequest: "2Gi"
-  cpuLimit: "4"
-  memoryLimit: "4Gi"
+#quotas:
+#  pods: "20"
+#  cpuRequest: "2"
+#  memoryRequest: "2Gi"
+#  cpuLimit: "4"
+#  memoryLimit: "4Gi"
