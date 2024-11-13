@@ -8,7 +8,7 @@ rolebinding:
   group_viewer: grp_test_adm_true_viewer_ocp_dev
 
 serviceaccount:
-  name: test_adm_true-dev-serviceaccount
+  name: test-adm-true-dev-serviceaccount
 
 quotas:
   pods: "20"
