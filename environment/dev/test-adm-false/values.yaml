@@ -4,11 +4,11 @@ namespace:
 rolebinding:
   #name_projadmin: grp_test_adm_true_proj-admin_ocp_dev
   #group_projadmin: grp_test_adm_true_proj-admin_ocp_dev
-  name_viewer: grp_test_adm_true_viewer_ocp_dev
-  group_viewer: grp_test_adm_true_viewer_ocp_dev
+  name_viewer: grp_test_adm_false_viewer_ocp_dev
+  group_viewer: grp_test_adm_false_viewer_ocp_dev
 
 serviceaccount:
-  name: test-adm-true-dev-serviceaccount
+  name: test-adm-tfalse-dev-serviceaccount
 
 quotas:
   pods: "20"
