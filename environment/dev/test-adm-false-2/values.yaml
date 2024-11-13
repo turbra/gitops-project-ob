@@ -2,11 +2,11 @@ namespace:
   name: test-adm-false-2
 
 rolebinding:
-  name_viewer: grp_test_adm_false2_viewer_ocp_dev
-  group_viewer: grp_test_adm_false2_viewer_ocp_dev
+  name_viewer: grp_test_adm_false2_viewer
+  group_viewer: grp_test_adm_false2_viewer
 
 serviceaccount:
-  name: test-adm-false2-dev-serviceaccount
+  name: test-adm-false2-serviceaccount
 
 quotas:
   pods: "20"

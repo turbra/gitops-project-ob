@@ -2,13 +2,13 @@ namespace:
   name: test-adm-true
 
 rolebinding:
-  name_projadmin: grp_test_adm_true_proj-admin_ocp_dev
-  group_projadmin: grp_test_adm_true_proj-admin_ocp_dev
-  name_viewer: grp_test_adm_true_viewer_ocp_dev
-  group_viewer: grp_test_adm_true_viewer_ocp_dev
+  name_projadmin: grp_test_adm_true_proj-admin
+  group_projadmin: grp_test_adm_true_proj-admin
+  name_viewer: grp_test_adm_true_viewer
+  group_viewer: grp_test_adm_true_viewer
 
 serviceaccount:
-  name: test-adm-true-dev-serviceaccount
+  name: test-adm-true-serviceaccount
 
 quotas:
   pods: "20"
