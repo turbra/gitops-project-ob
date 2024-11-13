@@ -1,3 +1,4 @@
+{{- if and .Values.quotas.enabled .Values.quotas.pods .Values.quotas.cpuRequest .Values.quotas.memoryRequest .Values.quotas.cpuLimit .Values.quotas.memoryLimit }}
 apiVersion: v1
 kind: ResourceQuota
 metadata:
@@ -10,3 +11,4 @@ spec:
     requests.memory: {{ .Values.quotas.memoryRequest }}
     limits.cpu: {{ .Values.quotas.cpuLimit }}
     limits.memory: {{ .Values.quotas.memoryLimit }}
+{{- end }}
