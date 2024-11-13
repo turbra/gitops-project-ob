@@ -8,9 +8,4 @@ rolebinding:
 serviceaccount:
   name: prod-adm-false-serviceaccount
 
-quotas:
-  pods: "20"
-  cpuRequest: "2"
-  memoryRequest: "2Gi"
-  cpuLimit: "4"
-  memoryLimit: "4Gi"
+
