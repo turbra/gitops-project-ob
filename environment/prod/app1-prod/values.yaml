@@ -1,6 +1,10 @@
 namespace:
   name: app1-prod
 
+rolebinding:
+  name_viewer: grp_app1-prod_viewer_ocp_dev
+  group_viewer: grp_app1-prod_viewer_ocp_dev
+
 serviceaccount:
   name: app1-prod-serviceaccount
 
