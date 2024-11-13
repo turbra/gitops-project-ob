@@ -1,0 +1,16 @@
+namespace:
+  name: dev-adm-false
+
+rolebinding:
+  name_viewer: grp_dev_adm_false_viewer
+  group_viewer: grp_dev_adm_false_viewer
+
+serviceaccount:
+  name: dev-adm-false-serviceaccount
+
+quotas:
+  pods: "20"
+  cpuRequest: "2"
+  memoryRequest: "2Gi"
+  cpuLimit: "4"
+  memoryLimit: "4Gi"

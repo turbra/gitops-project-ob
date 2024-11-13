@@ -1,0 +1,16 @@
+namespace:
+  name: prod-adm-false
+
+rolebinding:
+  name_viewer: grp_prod-adm-false_viewer
+  group_viewer: grp_prod-adm-false_viewer
+
+serviceaccount:
+  name: prod-adm-false-serviceaccount
+
+quotas:
+  pods: "20"
+  cpuRequest: "2"
+  memoryRequest: "2Gi"
+  cpuLimit: "4"
+  memoryLimit: "4Gi"
