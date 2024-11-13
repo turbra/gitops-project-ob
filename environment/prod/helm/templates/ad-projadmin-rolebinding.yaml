@@ -1,11 +1,11 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ .Values.rolebinding.name-projadmin }}
+  name: {{ .Values.rolebinding.name_projadmin }}
   namespace: {{ .Values.namespace.name }}
 subjects:
 - kind: Group
-  name: {{ .Values.rolebinding.group-projadmin }}
+  name: {{ .Values.rolebinding.group_projadmin }}
   namespace: {{ .Values.namespace.name }}
 roleRef:
   kind: ClusterRole
