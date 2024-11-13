@@ -11,6 +11,7 @@ serviceaccount:
   name: dev-adm-true-serviceaccount
 
 quotas:
+  enabled: false
   pods: "20"
   cpuRequest: "2"
   memoryRequest: "2Gi"
