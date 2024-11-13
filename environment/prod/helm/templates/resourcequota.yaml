@@ -1,4 +1,3 @@
-{{- if or (not .Values.quotas.enabled) .Values.quotas.enabled }}
 {{- if and .Values.quotas.pods .Values.quotas.cpuRequest .Values.quotas.memoryRequest .Values.quotas.cpuLimit .Values.quotas.memoryLimit }}
 apiVersion: v1
 kind: ResourceQuota
@@ -12,5 +11,4 @@ spec:
     requests.memory: {{ .Values.quotas.memoryRequest }}
     limits.cpu: {{ .Values.quotas.cpuLimit }}
     limits.memory: {{ .Values.quotas.memoryLimit }}
-{{- end }}
 {{- end }}
