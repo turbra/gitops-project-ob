@@ -8,9 +8,8 @@ spec:
   sourceRepos:
     - 'https://github.com/turbra/gitops-project-ob.git'
   destinations:
-    #- namespace: '*'
+    - namespace: '*'
       server: 'https://kubernetes.default.svc'
-      name: in-cluster
   clusterResourceWhitelist:
     - group: ''
       kind: 'Namespace'
