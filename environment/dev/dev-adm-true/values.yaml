@@ -25,7 +25,7 @@ limitRange:
     max:
       cpu: "4"
       memory: "4Gi"
-   container:
+  container:
     defaultRequest:
       cpu: "10m"
       memory: "64Mi"
