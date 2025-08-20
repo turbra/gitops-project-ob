@@ -16,3 +16,12 @@ quotas:
   memoryRequest: "2Gi"
   cpuLimit: "4"
   memoryLimit: "4Gi"
+
+limitRange:
+  pod:
+    min:
+      cpu: "1m"
+      memory: "10Mi"
+    max:
+      cpu: "4"
+      memory: "4Gi"
