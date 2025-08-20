@@ -13,4 +13,11 @@ spec:
     max:
       cpu: {{ .Values.limitRange.pod.max.cpu | quote }}
       memory: {{ .Values.limitRange.pod.max.memory | quote }}
+  - type: Container
+    defaultRequest:
+      cpu: {{ .Values.limitRange.container.defaultRequest.cpu | quote }}
+      memory: {{ .Values.limitRange.container.defaultRequest.memory | quote }}
+    default:
+      cpu: {{ .Values.limitRange.container.default.cpu | quote }}
+      memory: {{ .Values.limitRange.container.default.memory | quote }}
 {{- end }}
