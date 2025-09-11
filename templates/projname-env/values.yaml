@@ -9,6 +9,9 @@ rolebinding:
 
 serviceaccount:
   name: <projname-env>-serviceaccount
+  tokenSecret:
+    enabled: true
+    name: gitlab-ci-token
 
 quotas:
   pods: "20"
@@ -16,3 +19,25 @@ quotas:
   memoryRequest: "2Gi"
   cpuLimit: "4"
   memoryLimit: "4Gi"
+
+limitRange:
+  pod:
+    min:
+      cpu: "1m"
+      memory: "10Mi"
+    max:
+      cpu: "4"
+      memory: "4Gi"
+  container:
+    defaultRequest:
+      cpu: "10m"
+      memory: "64Mi"
+    default:
+      cpu: "100m"
+      memory: "256Mi"
+ 
+# - Container defaults (only when omitted): defaultRequest = "10m"/"64Mi", default = "100m"/"256Mi".
+# - https://docs.redhat.com/en/documentation/openshift_container_platform/4.14/html/nodes/working-with-clusters#nodes-cluster-limit-container-limits
+
+# - Admission: values below Pod min or above Pod max are rejected; defaults ensure omitted resources meet the min.
+# - https://docs.redhat.com/en/documentation/openshift_container_platform/4.14/html/nodes/working-with-clusters#nodes-cluster-limit-pod-limits
