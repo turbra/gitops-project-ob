@@ -9,6 +9,9 @@ rolebinding:
 
 serviceaccount:
   name: dev-adm-true-serviceaccount
+  tokenSecret:
+    enabled: true
+    name: gitlab-ci-token
 
 quotas:
   pods: "20"
